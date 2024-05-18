@@ -1,13 +1,263 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #efdabf;
+}
+
+.navbar h1 {
+  font-size: 40px;
+  color: #333;
+  text-transform: uppercase;
+  margin-left: 3%;
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+  margin-right: 3%;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 16px;
+}
+
+ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+ul li a:hover {
+  color: #ce7406;
+}
+
+.info {
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+.info h1 {
+  font-size: 60px;
+  color: #333
+}
+
+.info h3 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.info span {
+  color: #ce7406;
+}
+
+div.repo {
+  width: 100%;
+  max-width: 500px;
+  margin: 5% auto 0;
+  border-top: solid 2px #eee;
+  padding-top: 50px;
+  text-align: center;
+}
+
+div.repo h1 {
+  font-size: 30px;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px;
+}
+
+div.repo input, div.repo select {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: solid 1px #ccc;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+div.repo select {
+  margin-top: 10px;
+}
+
+div.repo .btn {
+  display: block;
+  width: 90px;
+  margin: auto;
+  position: relative;
+  top: 30%;
+  transition: 0.3s;
+}
+
+div.repo .btn:hover {
+  background-color: #af6205;
+} 
+
+div.btn-container {
+  background-color: #eeeeee73;
+  width: 90%;
+  margin: 15px auto;
+  height: 100px;
+  border-radius: 5px;
+}
+
+div.pagination {
+  margin: 0 auto;
+  width: 70%;
+}
+
+div.pagination .btn {
+  display: inline-block;
+  margin: 0 10px;
+  border: none;
+}
+
+.btn-error {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  width: 150px;
+  background-color: #312a5e;
+  margin: 25px auto 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.pagination .btn:disabled {
+  background-color: #af620597;
+}
+
+.error404 {
+  background-color: #5f0101;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 120px;
+  color: white;
+  padding: 50px 90px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.error404 * {
+  margin-top: 15px;
+}
+
+.error404 .btn {
+  background-color: #ce7406;
+  display: block;
+  width: 150px;
+  margin: 20px auto 0;
+}
+
+.btn {
+  background-color: #ce7406;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.repo-details {
+  margin: 50px auto;
+  width: 620px;
+  padding: 50px 70px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #333;
+  height: 380px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.repo-details * {
+  margin-bottom: 15px;
+}
+
+.repo-details h2 {
+  position: relative;
+  bottom: 2%;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.repo-details div {
+  text-align: center;
+}
+
+.repo-img {
+  border-radius: 50%;
+  width: 70px;
+  margin: 0 auto;
+  background-color: #eee;
+  position: relative;
+}
+
+.repo-details span {
+  font-weight: bold;
+}
+
+.repo-details a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.repo-details a:hover{
+  text-decoration: underline;
+}
+
+.error-page {
+  margin: 50px auto;
+  width: 620px;
+  padding: 50px 70px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #5f0101;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.attention {
+  text-align: left;
+  padding: 5px 10px;
+  background-color: #f8bb4991;
+  color: #785005;
+  border: solid 1px #785005;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin: 15px auto;
 }

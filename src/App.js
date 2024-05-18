@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PortApp from "./comps/portApp";
+import RepoList from "./comps/repoList";
+import RepoDetails from "./comps/repoDetails";
+import ErringComponent from "./comps/erringComp";
+import ErrorBoundary from "./comps/errorBoundary";
+import Erro404 from "./comps/error404";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <section>
+        <div className="main">
+          <Routes>
+            <Route path="/" element={<PortApp />} />
+          </Routes>
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<RepoList />} />
+              <Route path="/repository/:id" element={<RepoDetails />} />
+              <Route
+                path="/test-error-page"
+                element={
+                  <ErrorBoundary>
+                    <ErringComponent />
+                  </ErrorBoundary>
+                }
+              />
+              <Route path="*" element={<Erro404 />} />
+            </Routes>
+          </div>
+        </div>
+      </section>
+    </Router>
   );
 }
 
