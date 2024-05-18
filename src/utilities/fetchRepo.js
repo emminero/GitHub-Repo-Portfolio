@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const accessToken = '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';
+const accessToken = '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';
 
 const fetchRepositories = async (page = 1, perPage = 1) => {
   try {
