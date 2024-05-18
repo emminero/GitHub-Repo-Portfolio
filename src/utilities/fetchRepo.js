@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 
-const accessToken = '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';
+const accessToken = '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';
+
 const fetchRepositories = async (page = 1, perPage = 1) => {
   try {
     const response = await axios.get("https://api.github.com/user/repos", {
