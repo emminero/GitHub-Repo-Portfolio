@@ -1,0 +1,1 @@
+*Please uncomment code in Line 4 of erringComp.js in 'comps' folder to test error boundary. Also GitHub prevents me from pushing my code with my latest GitHub API access code. Please check my hosting link to test my project if possible. Thanks*
