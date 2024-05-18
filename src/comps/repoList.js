@@ -40,7 +40,7 @@ const RepoList = () => {
   });
 
   const nextPage = () => {
-    if (currentPage < 5) {
+    if (currentPage < 6) {
       setCurrentPage((prev) => prev + 1);
     }
   };
@@ -90,7 +90,7 @@ const RepoList = () => {
         <button onClick={prevPage} disabled={currentPage === 1} className="btn">
           Previous
         </button>
-        <button onClick={nextPage} disabled={currentPage >= 5} className="btn">
+        <button onClick={nextPage} disabled={currentPage >= 6} className="btn">
           Next
         </button>
       </div>
